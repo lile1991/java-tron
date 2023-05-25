@@ -30,8 +30,8 @@ import org.tron.protos.Protocol.Transaction.Contract.ContractType;
 @Component
 public class TransactionsMsgHandler implements TronMsgHandler {
 
-  private static int MAX_TRX_SIZE = Integer.MAX_VALUE;
-  private static int MAX_SMART_CONTRACT_SUBMIT_SIZE = Integer.MAX_VALUE;
+  private static int MAX_TRX_SIZE = 50_000;
+  private static int MAX_SMART_CONTRACT_SUBMIT_SIZE = 100;
   @Autowired
   private TronNetDelegate tronNetDelegate;
   @Autowired
