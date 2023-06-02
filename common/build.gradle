@@ -32,6 +32,7 @@ if (isWindows()) {
 
 repositories {
     mavenCentral()
+    maven { url 'http://192.168.9.208:8081/repository/maven-public/' }
 }
 
 dependencies {

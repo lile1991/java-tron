@@ -30,6 +30,7 @@ subprojects {
 
     repositories {
         mavenLocal()
+        maven { url 'http://192.168.9.208:8081/repository/maven-public/' }
         mavenCentral()
         maven { url 'https://repo.spring.io/plugins-release' }
         maven { url 'https://jitpack.io' }
