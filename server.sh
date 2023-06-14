@@ -11,7 +11,7 @@ start() {
 	pid=`ps -ef | grep $PROC_NAME | grep -v grep | awk '{print $2}'`
 	# -z 表示如果$pid为空时执行
 	if [ -z $pid ]; then
-	  nohup java -cp -Xms9G -Xmx9G -XX:ReservedCodeCacheSize=256m -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=512m -XX:MaxDirectMemorySize=1G -XX:+PrintGCDetails -XX:+PrintGCDateStamps  -Xloggc:gc.log -XX:+UseConcMarkSweepGC -XX:NewRatio=2 -XX:+CMSScavengeBeforeRemark -XX:+ParallelRefProcEnabled -XX:+HeapDumpOnOutOfMemoryError -XX:+UseCMSInitiatingOccupancyOnly  -XX:CMSInitiatingOccupancyFraction=70 -jar libs/FullNode.jar -c main_net_config.conf -d /data/tron > nohup.out 2>&1 &
+	  nohup java -cp -Xms8G -Xmx24G -XX:ReservedCodeCacheSize=256m -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=512m -XX:MaxDirectMemorySize=1G -XX:+PrintGCDetails -XX:+PrintGCDateStamps  -Xloggc:gc.log -XX:+UseConcMarkSweepGC -XX:NewRatio=2 -XX:+CMSScavengeBeforeRemark -XX:+ParallelRefProcEnabled -XX:+HeapDumpOnOutOfMemoryError -XX:+UseCMSInitiatingOccupancyOnly  -XX:CMSInitiatingOccupancyFraction=70 -jar libs/FullNode.jar -c main_net_config.conf -d /disk2/tron/output-directory > nohup.out 2>&1 &
 #		nohup java -jar $PROC_NAME $JAVA_OPTS /dev/null 2>&1 &
 		pid=`ps -ef | grep $PROC_NAME | grep -v grep | awk '{print $2}'`
 		echo ""
